@@ -87,7 +87,7 @@ const HeroSection = () => {
               <div className="w-full h-full rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden">
                 {!logoError ? (
                   <img
-                    src="/public/logo/mercado.jpg"
+                    src="/public/images/logo/mercado.jpg"
                     alt="Mercadão da Economia"
                     className="w-full h-full object-cover rounded-2xl"
                     onError={() => setLogoError(true)}
@@ -212,14 +212,14 @@ const HeroSection = () => {
                 <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500">
                   {!catImageError ? (
                     <img
-                      src="public/logo/galego-mercado.png"
+                      src="public/images/logo/galego-mercado.png"
                       alt="mercadao da economia"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       onError={() => setCatImageError(true)}
                     />
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-[#FF7300]/20 to-[#ED4A0F]/20 flex items-center justify-center text-8xl">
-                      🐱
+                      🛒
                     </div>
                   )}
 
