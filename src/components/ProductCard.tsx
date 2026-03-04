@@ -1,0 +1,98 @@
+import { motion } from "framer-motion";
+import { useState } from "react";
+
+interface ProductCardProps {
+  name: string;
+  oldPrice: number;
+  newPrice: number;
+  discount: number;
+  image: string;
+  validUntil: string;
+  index: number;
+}
+
+const ProductCard = ({
+  name,
+  oldPrice,
+  newPrice,
+  discount,
+  image,
+  validUntil,
+  index,
+}: ProductCardProps) => {
+  const [imageError, setImageError] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: index * 0.05 }}
+      whileHover={{ y: -5 }}
+      className="group relative bg-white dark:bg-slate-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+    >
+      {/* Discount Badge */}
+      <motion.div
+        initial={{ x: 50, rotate: 45 }}
+        animate={{ x: 0, rotate: 0 }}
+        transition={{ delay: index * 0.05 + 0.2 }}
+        className="absolute top-3 right-3 z-20"
+      >
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FF7300] to-[#ED4A0F] rounded-full blur-md opacity-50" />
+          <span className="relative bg-gradient-to-r from-[#FF7300] to-[#ED4A0F] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+            -{discount}%
+          </span>
+        </div>
+      </motion.div>
+
+      {/* Product Image */}
+      <div className="relative aspect-square bg-gradient-to-br from-muted/50 to-muted overflow-hidden">
+        {!imageError ? (
+          <motion.img
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.4 }}
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover"
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-[#FF7300]/20 to-[#ED4A0F]/20 flex items-center justify-center text-5xl">
+            🛒
+          </div>
+        )}
+      </div>
+
+      {/* Product Info - Centralizado */}
+      <div className="p-4 text-center">
+        <h3 className="font-semibold text-foreground text-sm leading-tight line-clamp-2 min-h-[2.5rem]">
+          {name}
+        </h3>
+
+        <div className="space-y-1 mt-3">
+          <p className="text-xs text-muted-foreground line-through">
+            R$ {oldPrice.toFixed(2).replace(".", ",")}
+          </p>
+          <div className="flex items-baseline justify-center gap-1">
+            <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF7300] to-[#ED4A0F]">
+              R$ {newPrice.toFixed(2).replace(".", ",")}
+            </span>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center gap-1 mt-3">
+          <motion.div
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="w-1.5 h-1.5 rounded-full bg-green-500"
+          />
+          <p className="text-xs text-muted-foreground">
+            Válido até {validUntil}
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+export default ProductCard;
