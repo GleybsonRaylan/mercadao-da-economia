@@ -87,7 +87,7 @@ const HeroSection = () => {
               <div className="w-full h-full rounded-2xl bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden">
                 {!logoError ? (
                   <img
-                    src="/images/logo/mercado.jpg"
+                    src="/images/logo/mercado.png"
                     alt="Mercadão da Economia"
                     className="w-full h-full object-cover rounded-2xl"
                     onError={() => setLogoError(true)}
@@ -169,28 +169,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               className="relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FF7300] to-[#ED4A0F] rounded-2xl blur-xl opacity-20" />
-              <div className="relative flex items-center gap-2 bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-border/50 p-1">
-                <div className="flex-1 flex items-center gap-2 px-4">
-                  <Search className="w-4 h-4 text-[#FF7300]" />
-                  <input
-                    type="text"
-                    placeholder="Buscar ofertas..."
-                    className="w-full bg-transparent outline-none text-sm text-foreground placeholder:text-muted-foreground"
-                    onFocus={handleViewOffers}
-                  />
-                </div>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={handleViewOffers}
-                  className="px-5 py-2 bg-gradient-to-r from-[#FF7300] to-[#ED4A0F] text-white rounded-xl font-medium text-xs shadow-lg shadow-[#FF7300]/25"
-                >
-                  Buscar
-                </motion.button>
-              </div>
-            </motion.div>
+            ></motion.div>
 
             {/* Foto do Gato - GRANDE, QUADRADA, PAISAGEM, SEM BORDAS */}
             <motion.div
@@ -209,14 +188,25 @@ const HeroSection = () => {
                 <div className="absolute -inset-4 bg-gradient-to-r from-[#FF7300]/10 via-transparent to-[#ED4A0F]/10 rounded-3xl blur-2xl opacity-70 group-hover:opacity-100 transition-opacity" />
 
                 {/* Container da imagem - formato paisagem quadrado */}
+                {/* Container da imagem - formato paisagem quadrado */}
                 <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500">
                   {!catImageError ? (
-                    <img
-                      src="images/logo/galego-mercado.png"
-                      alt="mercadao da economia"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      onError={() => setCatImageError(true)}
-                    />
+                    <>
+                      <img
+                        src="images/logo/galego-mercado.png"
+                        alt="mercadao da economia"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        onError={() => setCatImageError(true)}
+                      />
+                      {/* Overlay com degradê escuro */}
+                      <div
+                        className="absolute inset-0 pointer-events-none"
+                        style={{
+                          background:
+                            "linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.1))",
+                        }}
+                      />
+                    </>
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-[#FF7300]/20 to-[#ED4A0F]/20 flex items-center justify-center text-8xl">
                       🛒
