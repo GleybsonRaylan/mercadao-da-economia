@@ -60,7 +60,6 @@ const Ofertas = () => {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [showTop, setShowTop] = useState(false);
-  const [isCategoriesFixed, setIsCategoriesFixed] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 800);
@@ -70,10 +69,6 @@ const Ofertas = () => {
   useEffect(() => {
     const handleScroll = () => {
       setShowTop(window.scrollY > 400);
-
-      // Quando o scroll passar de 400px, as categorias ficam fixas
-      // Ajuste esse valor conforme necessário
-      setIsCategoriesFixed(window.scrollY > 400);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -267,122 +262,57 @@ const Ofertas = () => {
         </div>
       </section>
 
-      {/* BARRA DE CATEGORIAS FIXA (aparece quando rola a página) */}
-      <AnimatePresence>
-        {isCategoriesFixed && (
-          <motion.div
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -100, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed top-16 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-md py-3"
-          >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2">
-                  <div className="inline-flex items-center gap-1.5 bg-orange-50 text-orange-600 px-2 py-1 rounded-full text-xs font-medium">
-                    <Sparkles className="w-3 h-3" />
-                    <span>Ofertas</span>
-                  </div>
-                  <span className="text-xs text-gray-400 flex items-center gap-1">
-                    <Tag className="w-3 h-3" />
-                    Até Domingo
-                  </span>
-                </div>
-
-                {category !== "todos" && (
-                  <button
-                    onClick={handleClearFilters}
-                    className="text-xs text-gray-400 hover:text-orange-500 transition-colors"
-                  >
-                    Limpar
-                  </button>
-                )}
+      {/* BARRA DE CATEGORIAS - FIXA (sticky) */}
+      <div className="sticky top-16 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-md py-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center gap-2">
+              <div className="inline-flex items-center gap-1.5 bg-orange-50 text-orange-600 px-2 py-1 rounded-full text-xs font-medium">
+                <Sparkles className="w-3 h-3" />
+                <span>Ofertas</span>
               </div>
-
-              {/* Categorias scrolláveis */}
-              <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
-                {categoryConfig.map((cat) => (
-                  <button
-                    key={cat.id}
-                    onClick={() => handleCategoryChange(cat.id)}
-                    className={`
-                      flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-medium whitespace-nowrap
-                      transition-all duration-200 flex-shrink-0
-                      ${
-                        category === cat.id
-                          ? `bg-gradient-to-r ${cat.color} text-white shadow-md`
-                          : "bg-gray-50 text-gray-600 border border-gray-200 hover:border-orange-200 hover:bg-orange-50/50"
-                      }
-                    `}
-                  >
-                    <span>{cat.emoji}</span>
-                    {cat.label}
-                  </button>
-                ))}
-              </div>
+              <span className="text-xs text-gray-400 flex items-center gap-1">
+                <Tag className="w-3 h-3" />
+                Até Domingo
+              </span>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
+            {category !== "todos" && (
+              <button
+                onClick={handleClearFilters}
+                className="text-xs text-gray-400 hover:text-orange-500 transition-colors"
+              >
+                Limpar
+              </button>
+            )}
+          </div>
+
+          {/* Categorias scrolláveis */}
+          <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+            {categoryConfig.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => handleCategoryChange(cat.id)}
+                className={`
+                  flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-medium whitespace-nowrap
+                  transition-all duration-200 flex-shrink-0
+                  ${
+                    category === cat.id
+                      ? `bg-gradient-to-r ${cat.color} text-white shadow-md`
+                      : "bg-gray-50 text-gray-600 border border-gray-200 hover:border-orange-200 hover:bg-orange-50/50"
+                  }
+                `}
+              >
+                <span>{cat.emoji}</span>
+                {cat.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Conteúdo principal */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* INFO BAR e CATEGORIAS (versão normal, aparece no topo da página) */}
-        {!isCategoriesFixed && (
-          <>
-            {/* INFO BAR */}
-            <div className="flex items-center justify-between mb-6 bg-white/80 backdrop-blur-sm rounded-xl p-3 border border-gray-100">
-              <div className="flex items-center gap-3">
-                <div className="inline-flex items-center gap-1.5 bg-orange-50 text-orange-600 px-3 py-1.5 rounded-full text-xs font-medium">
-                  <Sparkles className="w-3 h-3" />
-                  <span>Ofertas Especiais</span>
-                </div>
-                <span className="text-xs text-gray-400 flex items-center gap-1">
-                  <Tag className="w-3 h-3" />
-                  Válido até Domingo
-                </span>
-              </div>
-
-              {category !== "todos" && (
-                <button
-                  onClick={handleClearFilters}
-                  className="text-xs text-gray-400 hover:text-orange-500 transition-colors"
-                >
-                  Limpar filtros
-                </button>
-              )}
-            </div>
-
-            {/* Categorias */}
-            <div className="mb-8">
-              <h3 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">
-                Categorias
-              </h3>
-              <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-                {categoryConfig.map((cat) => (
-                  <button
-                    key={cat.id}
-                    onClick={() => handleCategoryChange(cat.id)}
-                    className={`
-                      flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-medium whitespace-nowrap
-                      transition-all duration-200 flex-shrink-0
-                      ${
-                        category === cat.id
-                          ? `bg-gradient-to-r ${cat.color} text-white shadow-md scale-105`
-                          : "bg-white text-gray-600 border border-gray-200 hover:border-orange-200 hover:bg-orange-50/50"
-                      }
-                    `}
-                  >
-                    <span>{cat.emoji}</span>
-                    {cat.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </>
-        )}
-
         {/* Header da seção de produtos */}
         <div className="flex items-center justify-between mb-6">
           <div>
