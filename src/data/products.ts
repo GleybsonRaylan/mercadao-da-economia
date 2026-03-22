@@ -237,7 +237,7 @@ export const products: Product[] = [
     newPrice: 9.75,
     discount: 10,
     category: "frios",
-    image: "/images/frios/manteigaitambe.png",
+    image: "/images/frios/manteiga.jpg",
     validUntil: "domingo",
   },
   {
