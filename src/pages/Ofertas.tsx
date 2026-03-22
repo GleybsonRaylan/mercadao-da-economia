@@ -16,22 +16,10 @@ const categoryConfig = [
     color: "from-orange-500 to-red-500",
   },
   {
-    id: "frios",
-    label: "Frios",
-    emoji: "🧊",
-    color: "from-blue-400 to-blue-500",
-  },
-  {
-    id: "bebidas",
-    label: "Bebidas",
-    emoji: "🍺",
-    color: "from-amber-400 to-amber-500",
-  },
-  {
-    id: "limpeza",
-    label: "Limpeza",
-    emoji: "🧼",
-    color: "from-green-400 to-green-500",
+    id: "mercearia",
+    label: "Mercearia",
+    emoji: "🍪",
+    color: "from-purple-400 to-purple-500",
   },
   {
     id: "acougue",
@@ -40,16 +28,28 @@ const categoryConfig = [
     color: "from-red-400 to-red-500",
   },
   {
+    id: "bebidas",
+    label: "Bebidas",
+    emoji: "🍺",
+    color: "from-amber-400 to-amber-500",
+  },
+  {
+    id: "frios",
+    label: "Frios",
+    emoji: "🧊",
+    color: "from-blue-400 to-blue-500",
+  },
+  {
+    id: "limpeza",
+    label: "Limpeza",
+    emoji: "🧼",
+    color: "from-green-400 to-green-500",
+  },
+  {
     id: "hortifruti",
     label: "Hortifrúti",
     emoji: "🥬",
     color: "from-emerald-400 to-emerald-500",
-  },
-  {
-    id: "mercearia",
-    label: "Mercearia",
-    emoji: "🍪",
-    color: "from-purple-400 to-purple-500",
   },
 ];
 
