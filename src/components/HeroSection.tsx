@@ -193,7 +193,7 @@ const HeroSection = () => {
                   {!catImageError ? (
                     <>
                       <img
-                        src="images/logo/galego-mercado.png"
+                        src="images/logo/mercado-.png"
                         alt="mercadao da economia"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         onError={() => setCatImageError(true)}
