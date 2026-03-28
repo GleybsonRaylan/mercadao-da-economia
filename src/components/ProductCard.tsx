@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 interface ProductCardProps {
+  id: number;
   name: string;
   oldPrice: number;
   newPrice: number;
@@ -9,6 +10,7 @@ interface ProductCardProps {
   image: string;
   validUntil: string;
   index: number;
+  isPascoaActive?: boolean;
 }
 
 const ProductCard = ({
@@ -19,8 +21,12 @@ const ProductCard = ({
   image,
   validUntil,
   index,
+  isPascoaActive = false,
 }: ProductCardProps) => {
   const [imageError, setImageError] = useState(false);
+
+  const gradientFrom = isPascoaActive ? "from-pink-500" : "from-[#FF7300]";
+  const gradientTo = isPascoaActive ? "to-purple-500" : "to-[#ED4A0F]";
 
   return (
     <motion.div
@@ -28,7 +34,9 @@ const ProductCard = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
       whileHover={{ y: -5 }}
-      className="group relative bg-white dark:bg-slate-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+      className={`group relative bg-white dark:bg-slate-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${
+        isPascoaActive ? "ring-1 ring-pink-200" : ""
+      }`}
     >
       {/* Discount Badge */}
       <motion.div
@@ -38,9 +46,13 @@ const ProductCard = ({
         className="absolute top-3 right-3 z-20"
       >
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FF7300] to-[#ED4A0F] rounded-full blur-md opacity-50" />
-          <span className="relative bg-gradient-to-r from-[#FF7300] to-[#ED4A0F] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
-            -{discount}%
+          <div
+            className={`absolute inset-0 bg-gradient-to-r ${gradientFrom} ${gradientTo} rounded-full blur-md opacity-50`}
+          />
+          <span
+            className={`relative bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1`}
+          >
+            {isPascoaActive && <span>🐣</span>}-{discount}%
           </span>
         </div>
       </motion.div>
@@ -57,13 +69,21 @@ const ProductCard = ({
             onError={() => setImageError(true)}
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-[#FF7300]/20 to-[#ED4A0F]/20 flex items-center justify-center text-5xl">
-            🛒
+          <div
+            className={`w-full h-full bg-gradient-to-br ${gradientFrom}/20 ${gradientTo}/20 flex items-center justify-center text-5xl`}
+          >
+            {isPascoaActive ? "🐰" : "🛒"}
+          </div>
+        )}
+        {/* Selo de Páscoa */}
+        {isPascoaActive && (
+          <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1 text-xs font-bold text-pink-500 flex items-center gap-1 shadow-md">
+            <span>🐣</span> Especial Páscoa
           </div>
         )}
       </div>
 
-      {/* Product Info - Centralizado */}
+      {/* Product Info */}
       <div className="p-4 text-center">
         <h3 className="font-semibold text-foreground text-sm leading-tight line-clamp-2 min-h-[2.5rem]">
           {name}
@@ -74,7 +94,9 @@ const ProductCard = ({
             R$ {oldPrice.toFixed(2).replace(".", ",")}
           </p>
           <div className="flex items-baseline justify-center gap-1">
-            <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF7300] to-[#ED4A0F]">
+            <span
+              className={`text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r ${gradientFrom} ${gradientTo}`}
+            >
               R$ {newPrice.toFixed(2).replace(".", ",")}
             </span>
           </div>
@@ -84,7 +106,9 @@ const ProductCard = ({
           <motion.div
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1.5 h-1.5 rounded-full bg-green-500"
+            className={`w-1.5 h-1.5 rounded-full ${
+              isPascoaActive ? "bg-pink-500" : "bg-green-500"
+            }`}
           />
           <p className="text-xs text-muted-foreground">
             Válido até {validUntil}
