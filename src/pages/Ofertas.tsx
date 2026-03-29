@@ -141,7 +141,7 @@ const Ofertas = () => {
               🥚
             </div>
             <div className="absolute top-1/3 right-10 text-3xl opacity-10 animate-float">
-              🐣
+              ✝️
             </div>
           </div>
         )}
@@ -259,9 +259,9 @@ const Ofertas = () => {
                 <p className="text-base md:text-lg font-bold text-gray-800 flex-1">
                   {isPascoaActive ? (
                     <>
-                      🐣{" "}
+                      ✝️{" "}
                       <span className="text-pink-500">Páscoa no Mercadão!</span>{" "}
-                      🐣
+                      🐰
                       <br />
                       Ovos, colombas e chocolates com{" "}
                       <span className="text-[#FF7100]">preços especiais</span>!
@@ -308,7 +308,7 @@ const Ofertas = () => {
                 }`}
               >
                 {isPascoaActive
-                  ? "🐣 PROMOÇÃO DE PÁSCOA 🐣"
+                  ? "🐰 PROMOÇÃO DE PÁSCOA ✝️"
                   : "🐰 Especial de Páscoa"}
               </span>
             </motion.div>
@@ -335,7 +335,7 @@ const Ofertas = () => {
             </h2>
             <p className="text-gray-500 font-semibold text-base md:text-lg">
               {isPascoaActive
-                ? "🐣 Aproveite antes que os ovos acabem! 🐣"
+                ? " 🍫 Aproveite antes que os ovos acabem! 🐇"
                 : "Aproveite antes que acabe!"}
             </p>
           </motion.div>
@@ -403,7 +403,7 @@ const Ofertas = () => {
                     transition={{ duration: 1, repeat: Infinity }}
                     className="text-xs"
                   >
-                    🐣
+                    ✝️
                   </motion.span>
                 )}
               </button>
@@ -420,7 +420,7 @@ const Ofertas = () => {
             <h2 className="text-2xl font-bold text-gray-800">
               {isPascoaActive ? (
                 <span className="flex items-center gap-2">
-                  🐣 Ofertas de{" "}
+                  ✝️ Ofertas de{" "}
                   <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
                     Páscoa
                   </span>
@@ -487,7 +487,7 @@ const Ofertas = () => {
                       }`}
                     >
                       {isPascoaActive
-                        ? "Ver mais ofertas de Páscoa 🐣"
+                        ? "Ver mais ofertas de Páscoa ✝️"
                         : "Ver mais ofertas 🛒"}
                     </button>
                   </div>
@@ -513,7 +513,7 @@ const Ofertas = () => {
                 </h3>
                 <p className="text-sm text-gray-400 mb-6">
                   {isPascoaActive
-                    ? "Em breve teremos novidades para sua Páscoa! 🐣"
+                    ? "Em breve teremos novidades para sua Páscoa! ✝️"
                     : "Tente buscar por outra categoria ou termo"}
                 </p>
                 <button
