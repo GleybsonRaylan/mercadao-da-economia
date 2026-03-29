@@ -263,9 +263,8 @@ const Ofertas = () => {
                       <span className="text-pink-500">Páscoa no Mercadão!</span>{" "}
                       🐰
                       <br />
-                      Ovos, colombas e chocolates com{" "}
+                      Ovos, Peixe e chocolates com{" "}
                       <span className="text-[#FF7100]">preços especiais</span>!
-                      🎉
                     </>
                   ) : (
                     <>

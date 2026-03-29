@@ -52,7 +52,7 @@ const ProductCard = ({
           <span
             className={`relative bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1`}
           >
-            {isPascoaActive && <span>🐣</span>}-{discount}%
+            {isPascoaActive && <span>🐰</span>}-{discount}%
           </span>
         </div>
       </motion.div>
@@ -78,7 +78,7 @@ const ProductCard = ({
         {/* Selo de Páscoa */}
         {isPascoaActive && (
           <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1 text-xs font-bold text-pink-500 flex items-center gap-1 shadow-md">
-            <span>🐣</span> Especial Páscoa
+            <span>✝️</span> Especial Páscoa
           </div>
         )}
       </div>
