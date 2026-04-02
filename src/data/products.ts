@@ -665,8 +665,8 @@ export const products: Product[] = [
   {
     id: 67,
     name: " Caixa De Chocolate Nestle 215g",
-    oldPrice: 28.9,
-    newPrice: 25.4,
+    oldPrice: 15.9,
+    newPrice: 14.65,
     discount: 33,
     category: "pascoa",
     image: "/images/pascoa/caixa-nestle.png",
