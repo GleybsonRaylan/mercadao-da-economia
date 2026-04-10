@@ -72,7 +72,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 8,
+    id: 7,
     name: "Macarrão Instantâneo",
     oldPrice: 1.79,
     newPrice: 0.99,
@@ -82,7 +82,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 9,
+    id: 8,
     name: "Espaguete Tia Dora 400g",
     oldPrice: 2.79,
     newPrice: 1.89,
@@ -92,7 +92,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 10,
+    id: 9,
     name: "Molho de Tomate Tarantella 1,06kg",
     oldPrice: 10.79,
     newPrice: 9.85,
@@ -102,7 +102,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 11,
+    id: 10,
     name: "Biscoito Cream Cracker Marilan",
     oldPrice: 4.79,
     newPrice: 3.53,
@@ -112,7 +112,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 12,
+    id: 11,
     name: "Biscoito Cream Cracker Vitarella",
     oldPrice: 5.79,
     newPrice: 4.39,
@@ -122,7 +122,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 13,
+    id: 12,
     name: "Café Pretinho 194g",
     oldPrice: 13.79,
     newPrice: 12.3,
@@ -132,7 +132,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 14,
+    id: 13,
     name: "Café São Braz 250g",
     oldPrice: 17.79,
     newPrice: 16.49,
@@ -152,7 +152,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 14,
+    id: 15,
     name: "Leite Condensado Sabe",
     oldPrice: 6.79,
     newPrice: 5.44,
@@ -162,7 +162,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 15,
+    id: 16,
     name: "Café Maratá 250g",
     oldPrice: 16.79,
     newPrice: 15.49,
@@ -172,7 +172,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 16,
+    id: 17,
     name: "Leite itambé 200g",
     oldPrice: 7.5,
     newPrice: 7.09,
@@ -182,7 +182,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 17,
+    id: 18,
     name: "Manteiga Itambé Zero Lactose 200g",
     oldPrice: 10.99,
     newPrice: 9.75,
@@ -192,17 +192,17 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 17,
+    id: 19,
     name: "Manteiga Componesa Com Sal 200g",
     oldPrice: 12.99,
     newPrice: 10.16,
     discount: 10,
     category: "frios",
-    image: "/images/frios/manteiga.jpg",
+    image: "/images/frios/manteiga-componesa.webp",
     validUntil: "domingo",
   },
   {
-    id: 18,
+    id: 20,
     name: "Pepsi Black 2L",
     oldPrice: 7.99,
     newPrice: 4.99,
@@ -212,7 +212,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 18,
+    id: 21,
     name: "Energético Flying Horse 473ml",
     oldPrice: 6.99,
     newPrice: 4.99,
@@ -222,7 +222,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 21,
+    id: 22,
     name: "Jhonnie Walker Red Label 1L",
     oldPrice: 90.49,
     newPrice: 85.99,
@@ -232,7 +232,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 26,
+    id: 23,
     name: "Sabão em Pó Bem-Te-Vi 400g",
     oldPrice: 3.9,
     newPrice: 2.49,
@@ -242,7 +242,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 27,
+    id: 24,
     name: "Kit Monage 1 Shompoo 300ml +1 Condicionador 170ml",
     oldPrice: 15.99,
     newPrice: 12.99,
@@ -252,7 +252,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 28,
+    id: 25,
     name: "Kit Seda Shompoo 300ml +1 Condicionador 190ml",
     oldPrice: 17.99,
     newPrice: 16.47,
@@ -262,7 +262,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 29,
+    id: 26,
     name: "Kit Pantene Shompoo 300ml +1 Condicionador 150ml",
     oldPrice: 30,
     newPrice: 28.75,
@@ -272,7 +272,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 30,
+    id: 27,
     name: "Amaciante Dowy 1,5L 150ml GRATIS",
     oldPrice: 30,
     newPrice: 28.05,
@@ -282,7 +282,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 31,
+    id: 28,
     name: "Rollon Dove Men Invisible 50ml",
     oldPrice: 6.99,
     newPrice: 4.99,
@@ -292,7 +292,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 31,
+    id: 29,
     name: "Cerabrill Com Carnauba E Silicone",
     oldPrice: 23.99,
     newPrice: 21.14,
@@ -302,7 +302,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 31,
+    id: 30,
     name: "Limpa E Hidrata Couro 200g",
     oldPrice: 22.99,
     newPrice: 19.62,
@@ -322,7 +322,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 31,
+    id: 32,
     name: "Rexona Men Invisiblle 48h 150ml",
     oldPrice: 15.99,
     newPrice: 13.38,
@@ -352,17 +352,17 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 34,
+    id: 35,
     name: "Amaciente Downy 500ml",
     oldPrice: 11.99,
     newPrice: 9.91,
     discount: 24,
     category: "limpeza",
-    image: "/images/limpeza/downy-500ml.webp",
+    image: "/images/limpeza/downy-500ml.webpg",
     validUntil: "domingo",
   },
   {
-    id: 34,
+    id: 36,
     name: "Amaciente Downy 500ml 50ml GRATIS",
     oldPrice: 11.99,
     newPrice: 9.91,
@@ -372,7 +372,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 34,
+    id: 37,
     name: "Creme De Tratamento Ultraprofundo 300g",
     oldPrice: 12.99,
     newPrice: 11.75,
@@ -382,7 +382,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 34,
+    id: 38,
     name: "Creme Dental Oral B 70g",
     oldPrice: 11.99,
     newPrice: 4.9,
@@ -392,7 +392,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 35,
+    id: 39,
     name: "Lava Roupas Liquido Uze Clean 3L",
     oldPrice: 14.99,
     newPrice: 13.78,
@@ -402,7 +402,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 36,
+    id: 40,
     name: "Sabão Liquido ALA Lavadora 5 em 1 3L",
     oldPrice: 26.99,
     newPrice: 24.59,
@@ -412,7 +412,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 38,
+    id: 41,
     name: "Fígado Verde 1kg",
     oldPrice: 17.9,
     newPrice: 16.1,
@@ -422,7 +422,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 39,
+    id: 42,
     name: "Fígado Seco 1kg",
     oldPrice: 29.9,
     newPrice: 27.5,
@@ -432,7 +432,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 40,
+    id: 43,
     name: "Costela Bovina 1kg",
     oldPrice: 25.9,
     newPrice: 23.98,
@@ -442,7 +442,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 41,
+    id: 44,
     name: "Bisteca Suína 1kg",
     oldPrice: 15.9,
     newPrice: 14.6,
@@ -452,7 +452,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 42,
+    id: 45,
     name: "Coxa de Frango 1kg",
     oldPrice: 10.9,
     newPrice: 9.99,
@@ -462,7 +462,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 43,
+    id: 46,
     name: "Carne Chambaril 1kg",
     oldPrice: 20.9,
     newPrice: 19,
@@ -472,7 +472,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 44,
+    id: 47,
     name: "Charque P.A 1kg",
     oldPrice: 40.0,
     newPrice: 37.7,
@@ -482,7 +482,7 @@ export const products: Product[] = [
     validUntil: "domingo",
   },
   {
-    id: 45,
+    id: 48,
     name: "Peixe Corvina Inteira 1kg",
     oldPrice: 15.9,
     newPrice: 14.99,
@@ -492,7 +492,7 @@ export const products: Product[] = [
     validUntil: "domingo de páscoa",
   },
   {
-    id: 46,
+    id: 49,
     name: "Peixe Castanha Tratada",
     oldPrice: 16.9,
     newPrice: 14.45,
@@ -502,7 +502,7 @@ export const products: Product[] = [
     validUntil: "domingo de páscoa",
   },
   {
-    id: 47,
+    id: 50,
     name: "Sardinha Tratada",
     oldPrice: 13.9,
     newPrice: 11.49,
