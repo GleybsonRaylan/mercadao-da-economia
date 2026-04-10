@@ -358,7 +358,7 @@ export const products: Product[] = [
     newPrice: 9.91,
     discount: 24,
     category: "limpeza",
-    image: "/images/limpeza/downy-500ml.webpg",
+    image: "/images/limpeza/downy-500ml.webp",
     validUntil: "domingo",
   },
   {
