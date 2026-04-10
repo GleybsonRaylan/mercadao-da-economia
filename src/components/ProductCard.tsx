@@ -10,7 +10,6 @@ interface ProductCardProps {
   image: string;
   validUntil: string;
   index: number;
-  isPascoaActive?: boolean;
 }
 
 const ProductCard = ({
@@ -21,12 +20,11 @@ const ProductCard = ({
   image,
   validUntil,
   index,
-  isPascoaActive = false,
 }: ProductCardProps) => {
   const [imageError, setImageError] = useState(false);
 
-  const gradientFrom = isPascoaActive ? "from-pink-500" : "from-[#FF7300]";
-  const gradientTo = isPascoaActive ? "to-purple-500" : "to-[#ED4A0F]";
+  const gradientFrom = "from-[#FF7300]";
+  const gradientTo = "to-[#ED4A0F]";
 
   return (
     <motion.div
@@ -34,9 +32,7 @@ const ProductCard = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
       whileHover={{ y: -5 }}
-      className={`group relative bg-white dark:bg-slate-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${
-        isPascoaActive ? "ring-1 ring-pink-200" : ""
-      }`}
+      className="group relative bg-white dark:bg-slate-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
     >
       {/* Discount Badge */}
       <motion.div
@@ -52,7 +48,7 @@ const ProductCard = ({
           <span
             className={`relative bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1`}
           >
-            {isPascoaActive && <span>🐰</span>}-{discount}%
+            -{discount}%
           </span>
         </div>
       </motion.div>
@@ -72,13 +68,7 @@ const ProductCard = ({
           <div
             className={`w-full h-full bg-gradient-to-br ${gradientFrom}/20 ${gradientTo}/20 flex items-center justify-center text-5xl`}
           >
-            {isPascoaActive ? "🐰" : "🛒"}
-          </div>
-        )}
-        {/* Selo de Páscoa */}
-        {isPascoaActive && (
-          <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1 text-xs font-bold text-pink-500 flex items-center gap-1 shadow-md">
-            <span>✝️</span> Especial Páscoa
+            🛒
           </div>
         )}
       </div>
@@ -106,9 +96,7 @@ const ProductCard = ({
           <motion.div
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className={`w-1.5 h-1.5 rounded-full ${
-              isPascoaActive ? "bg-pink-500" : "bg-green-500"
-            }`}
+            className="w-1.5 h-1.5 rounded-full bg-green-500"
           />
           <p className="text-xs text-muted-foreground">
             Válido até {validUntil}
