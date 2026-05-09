@@ -124,12 +124,6 @@ const Ofertas = () => {
           }}
         />
       </div>
-
-      {/* Personagem 3D decorativo */}
-      <div className="fixed top-24 right-8 w-28 h-28 bg-gradient-to-br from-orange-400 to-red-400 rounded-full flex items-center justify-center text-5xl shadow-2xl hidden lg:flex z-10 animate-bounce-slow">
-        🛒
-      </div>
-
       {/* HEADER - Principal (sempre fixo) */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -205,7 +199,7 @@ const Ofertas = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex justify-center mb-10"
+            className="flex flex-col items-center mb-10"
           >
             <div className="relative inline-block w-full max-w-md">
               <div className="rounded-3xl shadow-lg p-5 flex items-center gap-4 border bg-white border-gray-100">
@@ -224,6 +218,30 @@ const Ofertas = () => {
                 </p>
               </div>
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 rotate-45 border-r border-b bg-white border-gray-100" />
+            </div>
+
+            {/* FAIXA JUNINA (AGORA AQUI EMBAIXO) */}
+            <div className="flex items-center justify-center gap-4 mt-6">
+              {/* Balão esquerdo */}
+              <img
+                src="/images/eventos/balao.png"
+                alt="Balão São João"
+                className="w-16 md:w-24 lg:w-28 object-contain"
+              />
+
+              {/* Bandeiras */}
+              <img
+                src="/images/eventos/bandeiras.png"
+                alt="Bandeiras São João"
+                className="w-40 md:w-72 lg:w-[400px] object-contain"
+              />
+
+              {/* Balão direito */}
+              <img
+                src="/images/eventos/balao.png"
+                alt="Balão São João"
+                className="w-16 md:w-24 lg:w-28 object-contain"
+              />
             </div>
           </motion.div>
 
