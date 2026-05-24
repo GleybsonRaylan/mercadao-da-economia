@@ -208,7 +208,7 @@ export const products: Product[] = [
     newPrice: 12.99,
     discount: 15,
     category: "mercearia",
-    image: "/images/mercearia/cafe-pilao.webp",
+    image: "/images/mercearia/pilao.webp",
     validUntil: "domingo",
   },
   {
@@ -280,7 +280,7 @@ export const products: Product[] = [
     newPrice: 7.19,
     discount: 26,
     category: "acougue",
-    image: "/images/acougue/salsicha-avivar.webp",
+    image: "/images/acougue/salsicha.webp",
     validUntil: "domingo",
   },
   {
@@ -536,7 +536,7 @@ export const products: Product[] = [
     newPrice: 22.25,
     discount: 24,
     category: "limpeza",
-    image: "/images/limpeza/fralda-cremer.webp",
+    image: "/images/limpeza/fralda-shortinho.webp",
     validUntil: "domingo",
   },
   {
@@ -576,7 +576,7 @@ export const products: Product[] = [
     newPrice: 36.49,
     discount: 24,
     category: "limpeza",
-    image: "/images/limpeza/chinelo-havaianas-brasil.webp",
+    image: "/images/limpeza/havaianas.png",
     validUntil: "domingo",
   },
   {
